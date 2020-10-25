@@ -10,6 +10,8 @@ import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 
 import { FormularioReceptorComponent } from './formulario-receptor/formulario-receptor.component';
 import { FormularioDonanteComponent } from './formulario-donante/formulario-donante.component';
+import { DonanteDetalleComponent } from './donante-detalle/donante-detalle.component';
+import { ReceptorDetalleComponent } from './receptor-detalle/receptor-detalle.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { FormularioDonanteComponent } from './formulario-donante/formulario-dona
 
 
     FormularioReceptorComponent,
-    FormularioDonanteComponent
+    FormularioDonanteComponent,
+    DonanteDetalleComponent,
+    ReceptorDetalleComponent
 
   ],
   imports: [
