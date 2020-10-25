@@ -3,10 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DonanteComponent } from './donante/donante.component';
+import { ReceptorComponent } from './receptor/receptor.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DonanteComponent,
+    ReceptorComponent
   ],
   imports: [
     BrowserModule,
