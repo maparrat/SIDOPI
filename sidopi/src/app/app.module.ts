@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DonanteComponent } from './donante/donante.component';
 import { ReceptorComponent } from './receptor/receptor.component';
+import { FormularioReceptorComponent } from './formulario-receptor/formulario-receptor.component';
+import { FormularioDonanteComponent } from './formulario-donante/formulario-donante.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DonanteComponent,
-    ReceptorComponent
+    ReceptorComponent,
+    FormularioReceptorComponent,
+    FormularioDonanteComponent
   ],
   imports: [
     BrowserModule,
