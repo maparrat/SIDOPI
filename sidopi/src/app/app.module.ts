@@ -26,7 +26,7 @@ import { RouterModule } from '@angular/router';
     DonanteDetalleComponent,
     ReceptorDetalleComponent,
     LandingComponent,
-    RouterModule
+ 
 
   ],
   imports: [
