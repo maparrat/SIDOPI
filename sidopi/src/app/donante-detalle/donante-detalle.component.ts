@@ -17,9 +17,14 @@ export class DonanteDetalleComponent implements OnInit {
   
     this.personaService.getPersonas()
     
-    .subscribe(donantes => {
-      this.personas = donantes
-      this.personas.forEach(per=> per.cedula ===this.donante_id.toString()? this.donante= per:0)
+      .subscribe(donantes => {
+        this.personas = donantes
+        console.log(this.donante_id)
+        this.personas.forEach(per => {
+
+          per.cedula == this.donante_id.toString() ? this.donante=per : 0
+      });
+     
     });
     
   }

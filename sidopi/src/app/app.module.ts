@@ -20,8 +20,6 @@ import { LandingComponent } from './landing/landing.component';
     AppComponent,
     DonanteComponent,
     ReceptorComponent,
-
-
     FormularioReceptorComponent,
     FormularioDonanteComponent,
     DonanteDetalleComponent,
