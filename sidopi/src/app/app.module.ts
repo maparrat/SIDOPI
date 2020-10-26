@@ -13,6 +13,7 @@ import { FormularioDonanteComponent } from './formulario-donante/formulario-dona
 import { DonanteDetalleComponent } from './donante-detalle/donante-detalle.component';
 import { ReceptorDetalleComponent } from './receptor-detalle/receptor-detalle.component';
 import { LandingComponent } from './landing/landing.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { LandingComponent } from './landing/landing.component';
     FormularioDonanteComponent,
     DonanteDetalleComponent,
     ReceptorDetalleComponent,
-    LandingComponent
+    LandingComponent,
+    RouterModule
 
   ],
   imports: [
