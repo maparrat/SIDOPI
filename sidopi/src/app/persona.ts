@@ -1,4 +1,5 @@
-export interface Persona{
+export class Persona{
+   
     nombre: string;
     cedula: string;
     tipoSangre: string;

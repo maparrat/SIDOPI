@@ -9,20 +9,25 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DonanteDetalleComponent implements OnInit {
   donante: Persona;
-  donante_id:number;
+  donante_id: number;
+  personas: Persona[];
   constructor(private personaService:PersonaService, private route: ActivatedRoute ) { }
 
   getDetail(): void {
-    this.personaService.getPersonaDetail(this.donante_id)
-    .subscribe(donante => {
-        this.donante = donante
-    });
   
+    this.personaService.getPersonas()
+    
+    .subscribe(donantes => {
+      this.personas = donantes
+      this.personas.forEach(per=> per.cedula ===this.donante_id.toString()? this.donante= per:0)
+    });
+    
   }
 
   ngOnInit(): void {
+    this.personas = [];
     this.donante_id = +this.route.snapshot.paramMap.get('id');
-  
+    this.donante = new Persona();
     
     this.getDetail();
   }

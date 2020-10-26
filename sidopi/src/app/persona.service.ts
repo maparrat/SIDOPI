@@ -17,9 +17,7 @@ export class PersonaService {
     return this.http.get<Array<Persona>>(this.apiUrl);
   }
 
-  getPersonaDetail(cedula): Observable<Persona> {
-    return this.http.get<Persona>(`${this.apiUrl}/${cedula}`);
-  }
+
 
 
 

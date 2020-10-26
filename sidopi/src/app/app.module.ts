@@ -12,6 +12,7 @@ import { FormularioReceptorComponent } from './formulario-receptor/formulario-re
 import { FormularioDonanteComponent } from './formulario-donante/formulario-donante.component';
 import { DonanteDetalleComponent } from './donante-detalle/donante-detalle.component';
 import { ReceptorDetalleComponent } from './receptor-detalle/receptor-detalle.component';
+import { LandingComponent } from './landing/landing.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ReceptorDetalleComponent } from './receptor-detalle/receptor-detalle.co
     FormularioReceptorComponent,
     FormularioDonanteComponent,
     DonanteDetalleComponent,
-    ReceptorDetalleComponent
+    ReceptorDetalleComponent,
+    LandingComponent
 
   ],
   imports: [
