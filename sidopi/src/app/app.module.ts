@@ -14,6 +14,7 @@ import { DonanteDetalleComponent } from './donante-detalle/donante-detalle.compo
 import { ReceptorDetalleComponent } from './receptor-detalle/receptor-detalle.component';
 import { LandingComponent } from './landing/landing.component';
 import { RouterModule } from '@angular/router';
+import { donadorService } from './receptor-detalle/donadorService';
 
 
 @NgModule({
@@ -34,7 +35,7 @@ import { RouterModule } from '@angular/router';
     AppRoutingModule, 
     HttpClientModule
   ],
-  providers: [],
+  providers: [donadorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

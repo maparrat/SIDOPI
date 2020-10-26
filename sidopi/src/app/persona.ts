@@ -7,7 +7,7 @@ export class Persona{
   //  detalles del color de piel 
     tatuajes: boolean;
     cortes: boolean; 
-    cicatricres: boolean;
+    cicatrices: boolean;
     phPiel: number; 
     cantidadVello: number; 
     descripcion: string;   

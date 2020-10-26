@@ -20,7 +20,7 @@ export class ReceptorComponent implements OnInit {
    
     this.personaService.getPersonas().subscribe(per => {
       console.log(this.receptores)
-      per.forEach(persona=>persona.receptor == true ? this.receptores.push(persona): 0 )
+      per.forEach(persona=>true== true ? this.receptores.push(persona): 0 )
      })
    
   
