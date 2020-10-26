@@ -6,6 +6,7 @@
       <th class="h4">Tipo de sangre</th>
       <th class="h4">Ph</th>
       <th class="h4">Color piel</th>
+      <th class="h4"></th>
     </tr>
     <tr *ngFor="let c of compatibles">
       <td>
@@ -19,6 +20,9 @@
       </td>
       <td>
         {{ c.colorPiel }}
+      </td>
+      <td>
+        <button type="button" class="btn btn-outline-primary">Mas info</button>
       </td>
     </tr>
   </thead>
