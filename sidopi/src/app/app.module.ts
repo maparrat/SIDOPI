@@ -15,6 +15,7 @@ import { ReceptorDetalleComponent } from './receptor-detalle/receptor-detalle.co
 import { LandingComponent } from './landing/landing.component';
 import { RouterModule } from '@angular/router';
 import { donadorService } from './receptor-detalle/donadorService';
+import { ReceptorTriageComponent } from './receptor-triage/receptor-triage.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { donadorService } from './receptor-detalle/donadorService';
     DonanteDetalleComponent,
     ReceptorDetalleComponent,
     LandingComponent,
+    ReceptorTriageComponent,
  
 
   ],
