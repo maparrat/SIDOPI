@@ -1,12 +1,21 @@
 <h1>Lista de donantes compatibles para {{ receptor.nombre }}</h1>
+<h1>
+  Lista de donantes compatibles para <b>{{ receptor.nombre }}</b>
+</h1>
+<h4><b>Tipo de sangre: </b>{{ receptor.tipoSangre }}</h4>
+<h4><b>Ph de la Piel: </b>{{ receptor.phPiel }}</h4>
+<h4><b>Color de Piel: </b>{{ receptor.colorPiel }}</h4>
+
 <table class="table">
   <thead>
     <tr>
       <th class="h4">Nombre paciente</th>
       <th class="h4">Tipo de sangre</th>
-      <th class="h4">Ph</th>
-      <th class="h4">Color piel</th>
+      <th class="h4">Compatibilidad PH</th>
+      <th class="h4">Compatibilidad Color</th>
+      <th class="h4">Compatibilidad Vello</th>
     </tr>
+
     <tr *ngFor="let c of compatibles">
       <td>
         <dd>{{ c.nombre }}</dd>
@@ -15,11 +24,10 @@
         <dd>{{ c.tipoSangre }}</dd>
       </td>
       <td>
-        <dd>{{ c.phPiel }}</dd>
+        <dd>{{ c.compPhPiel }}%</dd>
       </td>
-      <td>
-        {{ c.colorPiel }}
-      </td>
+      <td>{{ c.compColor }}%</td>
+      <td>{{ c.compVello }}%</td>
     </tr>
   </thead>
   <tbody></tbody>

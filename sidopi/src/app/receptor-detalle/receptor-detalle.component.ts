@@ -13,7 +13,8 @@ export class ReceptorDetalleComponent implements OnInit {
   receptor_id: number;
   personas: Persona[];
   donantes:Persona[];
-  compatibles:Persona[];
+  compatibles: Persona[];
+  
   constructor(private personaService:PersonaService, private route: ActivatedRoute ,private servicio:donadorService) { }
 
   //funciona receptores 
@@ -36,22 +37,55 @@ export class ReceptorDetalleComponent implements OnInit {
     
   }
 
+   getCompatiblesSangre(tipoSangre) {
+    let ans = []
+    tipoSangre === "A+"  ? ans = ["O+", "O-", "A+", "A-"] :
+    tipoSangre === "A-"  ? ans = ["O-", "A-"] :
+    tipoSangre === "B+"  ? ans = ["O+", "O-", "B+", "B-"] :
+    tipoSangre === "B-"  ? ans = ["O-", "B-"]:
+    tipoSangre === "AB+" ? ans = ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"]:
+    tipoSangre === "AB-" ? ans = ["A-", "B-", "AB-", "O-"] :
+    tipoSangre === "O+" ? ans = ["O+", "O-"] :
+    tipoSangre === "O-" ? ans = ["O-"] : 
+    ans = []
+    return ans
+  }
+
+
+ 
 
   // xd aca donante 
   getCompatibles(): void{
 
-    this.personas.forEach(per => { 
+    this.personas.forEach(per => {
       let flag = true;
+      var sangre=this.getCompatiblesSangre(this.receptor.tipoSangre)
+      sangre.includes(per.tipoSangre)? flag=true: flag=false
+      
       per.donante === true ? flag = false : 0;
-      per.tipoSangre != this.receptor.tipoSangre ? flag = false : 0;
-      per.phPiel != this.receptor.phPiel ? flag = false : 0;
-      per.cantidadVello - this.receptor.cantidadVello > 10 ? flag = false : 0;
-      per.colorPiel != this.receptor.colorPiel ? flag = false : 0;
+      
+     
+      var porcentajeColorPiel = Math.abs(100- 100*(Math.abs(per.colorPiel - this.receptor.colorPiel) /5))
+      
+      var porcentajePhPiel= Math.abs(100-100*(Math.abs(per.phPiel-this.receptor.phPiel)/1.25))
+
+      var porcentajeVello = Math.abs(100-100*(Math.abs(per.cantidadVello - this.receptor.cantidadVello) / 10))
+      
+      
+     
+      
+      
       per.cedula === this.receptor.cedula ? flag = false : 0;
+      per["compColor"] =porcentajeColorPiel.toFixed(2)
+      per["compPhPiel"] = porcentajePhPiel.toFixed(2)
+      per["compVello"] = porcentajeVello.toFixed(2)
       flag === true ? this.compatibles.push(per) : 0;
+      
     })
+    
   }
 
+ 
  
   ngOnInit(): void {
     this.personas = [];

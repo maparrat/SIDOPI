@@ -1,13 +1,11 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-4 col-sm-4 col-4 col-lg-4" *ngFor="let d of donantes">
-      <div class="card" style="width: 18rem">
-        <img class="card-img-top" src="{{ d.foto }}" alt="Card image cap" />
-        <div class="card-body">
-          <h5 class="card-title">{{ d.nombre }}</h5>
-          <p class="card-text"><b>Cedula: </b>{{ d.cedula }}</p>
-          <a href="/dd/{{ d.cedula }}" class="btn btn-primary">Ver Detalle </a>
-        </div>
+<div class="row">
+  <div class="col-md-4 col-sm-4 col-4 col-lg-4" *ngFor="let d of donantes">
+    <div class="card" style="width: 18rem">
+      <img class="card-img-top" src="{{ d.foto }}" alt="Card image cap" />
+      <div class="card-body">
+        <h5 class="card-title">{{ d.nombre }}</h5>
+        <p class="card-text"><b>Cedula: </b>{{ d.cedula }}</p>
+        <a href="/dd/{{ d.cedula }}" class="btn btn-primary">Ver Detalle </a>
       </div>
     </div>
   </div>

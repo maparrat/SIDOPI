@@ -3,7 +3,7 @@ export class Persona{
     nombre: string;
     cedula: string;
     tipoSangre: string;
-    colorPiel: string;
+    colorPiel: number;
   //  detalles del color de piel 
     tatuajes: boolean;
     cortes: boolean; 
@@ -13,5 +13,6 @@ export class Persona{
     descripcion: string;   
     donante: boolean;
     receptor: boolean; 
-    foto: string;
+  foto: string;
+  
 }
