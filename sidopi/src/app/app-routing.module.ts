@@ -7,6 +7,7 @@ import { FormularioReceptorComponent } from './formulario-receptor/formulario-re
 import { LandingComponent } from './landing/landing.component';
 import { ReceptorDetalleComponent } from './receptor-detalle/receptor-detalle.component';
 import { ReceptorComponent } from './receptor/receptor.component';
+import { ReceptorTriageComponent } from './receptor-triage/receptor-triage.component';
 
 const routes: Routes = [
   { path: 'fr', component: FormularioReceptorComponent,  pathMatch: 'full'}, 
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'lr', component: ReceptorComponent, pathMatch:'full' },
   { path: 'd', component: DonanteComponent, pathMatch: 'full' },
   { path: "", component: LandingComponent, pathMatch: 'full' },
-  {path:"#", component:LandingComponent, pathMatch:'full'}
+  {path:"#", component:LandingComponent, pathMatch:'full'},
+  {path: 'rt', component:ReceptorTriageComponent, pathMatch: 'full'}
 ];
 
 @NgModule({

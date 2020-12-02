@@ -1,0 +1,30 @@
+<h1>Lista de pacientes ordenados por prioridad triage</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th class="h4">Nombre paciente</th>
+      <th class="h4">Tipo de sangre</th>
+      <th class="h4">Ph</th>
+      <th class="h4">Color piel</th>
+      <th class="h4"></th>
+    </tr>
+    <tr *ngFor="let c of receptores">
+      <td>
+        <dd>{{ c.nombre }}</dd>
+      </td>
+      <td>
+        <dd>{{ c.tipoSangre }}</dd>
+      </td>
+      <td>
+        <dd>{{ c.phPiel }}</dd>
+      </td>
+      <td>
+        {{ c.colorPiel }}
+      </td>
+      <td>
+        <button type="button" class="btn btn-outline-primary">Mas info</button>
+      </td>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
